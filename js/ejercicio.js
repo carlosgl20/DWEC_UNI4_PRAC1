@@ -25,7 +25,6 @@ function inicioPagina() {
     siguiente.addEventListener("click", mover);
     anterior.addEventListener("click", mover);
     ultima.addEventListener("click", esquinas);
-
     deshabilitarHabilitar();
 }
 
@@ -37,7 +36,6 @@ function esquinas(event) {
         var imagenUltima = galeria.setImagenUltimo();
         //Y ponemos la última imagen
         contenedor.style.backgroundImage = "url(" + "../images/" + imagenUltima + ".jpg)";
-
         deshabilitarHabilitar();
     }
     else if (event.target.id === primera.id) {
@@ -45,14 +43,12 @@ function esquinas(event) {
         var imagenPrimera = galeria.setImagenPrimero();
         //Y ponemos la primera imagen
         contenedor.style.backgroundImage = "url(" + "../images/" + imagenPrimera + ".jpg)";
-
         deshabilitarHabilitar();
     }
 }
 
 //Nos permite movernos a la izquierda o a la derecha
 function mover(event) {
-
     if (event.target.id === siguiente.id) {
         //Guardamos la imagen siguiente
         var imagenSiguiente = galeria.setImagenSiguiente();
@@ -60,13 +56,11 @@ function mover(event) {
         contenedor.style.backgroundImage = "url(" + "../images/" + imagenSiguiente + ".jpg)";
         deshabilitarHabilitar();
     }
-
     else if (event.target.id === anterior.id) {
         //Guardamos la imagen anterior
         var imagenAnterior = galeria.setImagenAnterior();
         //Ponemos la imagen anterior
         contenedor.style.backgroundImage = "url(" + "../images/" + imagenAnterior + ".jpg)";
-
         deshabilitarHabilitar();
     }
 }

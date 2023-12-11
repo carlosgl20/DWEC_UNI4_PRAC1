@@ -14,7 +14,7 @@ export default class Galeria {
             this.imagenes.push(imagen);
         }  
         }
-
+        
         //Generamos una imagen aleatoria
         setImagenAleatorio() {
         //Se le asigna un random al indice para que sea aleatorio (Multiplicándolo por el número de imágenes)
@@ -62,9 +62,6 @@ export default class Galeria {
         //Asginamos el último valor del array al índice
         this.indice  = this.imagenes.length - 1;
         //Y devolvemos la imagen que se encuentra en esa posición
-        return this.imagenes[this.indice ];
+        return this.imagenes[this.indice];
         }
-        
-      
-
 }
